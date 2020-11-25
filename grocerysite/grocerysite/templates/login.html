@@ -1,21 +1,17 @@
+<html>
+<body>
 <h1>GROCERY SITE</h1>
 <h2>Login</h2>
 <ul>
 <div class="container">
-  <label for="uname"><b>Username</b></label>
-  <input type="text" placeholder="Enter Username" name="uname" required>
-
-  <label for="psw"><b>Password</b></label>
-  <input type="password" placeholder="Enter Password" name="psw" required>
-
-  <button type="submit">Login</button>
-  <label>
-    <input type="checkbox" checked="checked" name="remember"> Remember me
-  </label>
-  <br>
-  <label>
-    <a href="../">home</a>
-  </label>
-
+<form method="POST" action="">
+  {% csrf_token %}
+  {% if error %}
+  {{ error }}
+  {% endif %}
+  {{ form.as_p }}
+  <input type="submit" name="submit" value="Log In"/>
 </div>
 </ul>
+
+</body>
