@@ -9,6 +9,9 @@ def index(request):
 def search(request):
     return render(request, "search.html")
 
+def login(request):
+    return render(request, "login.html")
+
 def search_result(request, search_parameter):
     query1 = Product.objects.filter(product_description__icontains=search_parameter)
     query2 = Product.objects.filter(product_name__icontains=search_parameter)

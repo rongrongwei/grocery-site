@@ -3,7 +3,7 @@
 # https://docs.conda.io/en/latest/miniconda.html
 
 # create conda environment
-conda create -n djenv python=38
+conda create -n djenv python=3.8
 
 # activate conda environment
 conda init bash

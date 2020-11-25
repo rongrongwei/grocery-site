@@ -21,6 +21,7 @@ from grocerysite import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+    path('login/', views.login, name='login'),
     path('search/', views.search, name='search'),
     path('search_result/<str:search_parameter>', views.search_result, name='results'),
 ]
