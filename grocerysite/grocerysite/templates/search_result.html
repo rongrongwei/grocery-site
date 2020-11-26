@@ -11,7 +11,7 @@
 <ul>
   {% for prod in results %}
     <li>
-      {{ prod.product_name }}, {{ prod.product_price }}, {{ prod.product_price_unit }}, {{ prod.product_description }}, {{ prod.product_img_url }}
+      {{ prod.product_name }}, {{ prod.product_price }}, {{ prod.product_price_unit }}, {{ prod.product_description }}, <img src="/static/{{ prod.product_img_url }}" height="150px">
     </li>
   {% endfor %}
 </ul>

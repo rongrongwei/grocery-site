@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import include, path
 from django.conf.urls import url
 from .views import login
+from django.conf.urls.static import static
+from django.conf import settings
 
 from grocerysite import views
 
@@ -27,4 +29,5 @@ urlpatterns = [
     path('search/', views.search, name='search'),
     #path('search_result/', views.SearchResultsView.as_view(), name='search_results'),
     path('search_result/', views.search_result, name='search_results'),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
