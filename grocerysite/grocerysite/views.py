@@ -5,6 +5,7 @@ from django.contrib.auth import login
 from .forms import Loginform
 import pdb, sqlite3
 
+
 def index(request):
     return render(request, "index.html")
 
@@ -39,13 +40,12 @@ def login(request):
     return render(request, "login.html", context)
 
 
-def search_result(request, search_parameter):
+def search_result(request):
+    search_parameter = request.GET.get('q')
     query1 = Product.objects.filter(product_description__icontains=search_parameter)
     query2 = Product.objects.filter(product_name__icontains=search_parameter)
     results = query1.union(query2)
-    print(results.values())
 
-    string_response = str(results.values())
-    context = {'results':string_response}
+    context = {'results':results}
     return render(request, "search_result.html", context)
 

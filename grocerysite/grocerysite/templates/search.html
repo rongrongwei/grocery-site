@@ -1,6 +1,9 @@
 <h1>GROCERY SITE</h1>
 <h2>Search for Groceries</h2>
 <p>This is the search page page. Buy groceries!!!<br>
+<form action="{% url 'search_results' %}" method="get">
+  <input name="q" type="text" placeholder="Search for Groceries">
+</form>
 LINKS:
 <ul>
     <li><a href="../">home</a></li>

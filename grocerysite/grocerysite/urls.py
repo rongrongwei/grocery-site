@@ -25,5 +25,6 @@ urlpatterns = [
     path('', views.index, name='index'),
     url('login/', login, name='login'),
     path('search/', views.search, name='search'),
-    path('search_result/<str:search_parameter>', views.search_result, name='results'),
+    #path('search_result/', views.SearchResultsView.as_view(), name='search_results'),
+    path('search_result/', views.search_result, name='search_results'),
 ]
