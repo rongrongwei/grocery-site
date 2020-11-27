@@ -7,7 +7,8 @@ from django.urls import reverse
 from .forms import Loginform
 import pdb, sqlite3
 
-from .models import Profile, Order, Product, OrderItem
+# from .models import Profile, Order, Product, OrderItem
+from grocerysite.models import Product # <- this line is important for search
 
 
 def index(request):
