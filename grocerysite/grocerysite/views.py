@@ -1,9 +1,13 @@
-from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, get_object_or_404, redirect
 # from django import models
-from grocerysite.models import Product
 from django.contrib.auth import login
+from django.urls import reverse
+
 from .forms import Loginform
 import pdb, sqlite3
+
+from .models import Profile, Order, Product, OrderItem
 
 
 def index(request):
@@ -48,4 +52,22 @@ def search_result(request):
 
     context = {'results':results}
     return render(request, "search_result.html", context)
+
+
+@login_required()
+def add_to_cart(request, **kwargs):
+    #grab usr profile
+    user_profile = get_object_or_404(Profile, user=request.user)
+    #filter prducts by id
+    product = Product.objects.filter(id=kwargs.get('item_id' ,"")).first()
+    #create orderitem of the selected grocery
+    order_item, status = OrderItem.objects.get_or_create(product=product)
+    return redirect(reverse('products:product-list'))
+
+
+
+
+
+
+
 
