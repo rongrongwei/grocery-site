@@ -1,7 +1,43 @@
-<h1>GROCERY SITE</h1>
-<p>This is the index page. Buy groceries!!!<br></p>
-LINKS:
-<ul>
-    <li><a href="/search">search</a></li>
-    <li><a href="/login">login</a></li>
-</ul>
+<!-- this extends the header.html -->
+{% extends "header.html" %}
+{% block content %}
+
+        <p>This is the index page. Buy groceries!!!<br></p>
+
+
+
+     <!-- SLIDER -->
+        <h1>SLIDER</h1>
+
+
+            <ul class ="slides">
+              <li>
+                  <img src="https://pngimg.com/uploads/pizza/pizza_PNG44026.png" alt="" class="responsive-img" alt="">
+                  <div class="caption center-align">
+                      <h3> THIS is our tagline</h3>
+                      <h5 class="light grey-text text-lighten-3"> here is our slogan</h5>
+                  </div>
+              </li>
+
+        </div>
+
+
+
+<div class="slider">
+
+  <li>
+    <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
+    <div class="caption center-align">
+      <h3>This is our big Tagline!</h3>
+      <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+    </div>
+  </li>
+</div>>
+
+        <!--
+        LINKS:
+        <li><a href="/search">search</a></li>
+        <li><a href="/login">login</a></li>
+        -->
+
+{% endblock %}
