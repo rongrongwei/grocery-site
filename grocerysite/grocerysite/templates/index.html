@@ -2,15 +2,11 @@
 {% extends "header.html" %}
 {% block content %}
 
-        <p>This is the index page. Buy groceries!!!<br></p>
-
-
-
+ <script> $(document).ready(function(){
+    $('.carousel').carousel();
+  });
+ </script>
      <!-- SLIDER -->
-        <h1>SLIDER</h1>
-
-
-            <ul class ="slides">
               <li>
                   <img src="https://pngimg.com/uploads/pizza/pizza_PNG44026.png" alt="" class="responsive-img" alt="">
                   <div class="caption center-align">
@@ -18,50 +14,40 @@
                       <h5 class="light grey-text text-lighten-3"> here is our slogan</h5>
                   </div>
               </li>
-
-
             </ul>
         </div>
 
+ <div class="carousel">
+    <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/250/250/nature/1"></a>
+    <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/250/250/nature/2"></a>
+    <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/250/250/nature/3"></a>
+    <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/250/250/nature/4"></a>
+    <a class="carousel-item" href="#five!"><img src="https://lorempixel.com/250/250/nature/5"></a>
+  </div>
 
+        <!-- footer wouldve added to all pages but still figuring stuff out-->
+    <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Developers</h5>
+                <p class="grey-text text-lighten-4">Rongrong Wei, Michael Poznecki, Chris Urista, Kyle, and Isaiah Rodriguez</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">About</h5>
+                <ul>
+                    <p class="grey-text text-lighten-4">This is the index page. Buy groceries!!!</p>
 
-<div class="slider">
-    <ul class="slides">
-  <li>
-    <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
-    <div class="caption center-align">
-      <h3>This is our big Tagline!</h3>
-      <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-    </div>
-  </li>
-  <li>
-    <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
-    <div class="caption left-align">
-      <h3>Left Aligned Caption</h3>
-      <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-    </div>
-  </li>
-  <li>
-    <img src="http://lorempixel.com/580/250/nature/3"> <!-- random image -->
-    <div class="caption right-align">
-      <h3>Right Aligned Caption</h3>
-      <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-    </div>
-  </li>
-  <li>
-    <img src="http://lorempixel.com/580/250/nature/4"> <!-- random image -->
-    <div class="caption center-align">
-      <h3>This is our big Tagline!</h3>
-      <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-    </div>
-  </li>
-</ul>
-</div>>
-
-        <!--
-        LINKS:
-        <li><a href="/search">search</a></li>
-        <li><a href="/login">login</a></li>
-        -->
-
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2020 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
 {% endblock %}
+
