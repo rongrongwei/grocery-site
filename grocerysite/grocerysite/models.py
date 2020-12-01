@@ -1,6 +1,9 @@
-from django.db import models
+import datetime
 
-from grocerysite.grocerysite import settings
+from django.contrib.auth.models import User
+from django.db import models
+from django.shortcuts import reverse
+from django.conf import settings
 
 
 class Product(models.Model):
@@ -12,30 +15,32 @@ class Product(models.Model):
     product_price_unit = models.CharField(max_length=50, null=True)
     product_added = models.DateTimeField(auto_now=True, null=True)
     product_img_url = models.CharField(max_length=100, null=True)
-    
+
+    def get_add_to_cart_url(self):
+        return reverse("core:add-to-cart", kwargs={
+            'slug': self.slug
+        })
+
+    def get_remove_from_cart_url(self):
+        return reverse("core:remove-from-cart", kwargs={
+            'slug': self.slug
+        })
+
     class Meta:
         db_table = 'product'
 
-#way of capturing what the user actually owns so we use a manytomanyfield
-class Profile(models.Model):
-    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.user.username
-
-#one order consists of many order items
 class OrderItem(models.Model):
-    Product = models.OneToOneField(Product, on_delete=models.SET_NULL, null =True)
+    product = models.OneToOneField(Product, on_delete=models.SET_NULL, null=True)
     is_ordered = models.BooleanField(default=False)
-    date_ordered = models.DateTimeField(null=True)
     date_added = models.DateTimeField(auto_now=True)
+    date_ordered = models.DateTimeField(null=True)
 
     def __str__(self):
-        return self.product.product_name
+        return self.product.name
+
 
 class Order(models.Model):
-    ref_code=models.CharField(max_length=15)
-    owner = models.ForeignKey(Profile, on_delete=models.SET_NULL, null=True)
+    ref_code = models.CharField(max_length=15)
     is_ordered = models.BooleanField(default=False)
     items = models.ManyToManyField(OrderItem)
     date_ordered = models.DateTimeField(auto_now=True)
@@ -45,6 +50,10 @@ class Order(models.Model):
 
     def get_cart_total(self):
         return sum([item.product.price for item in self.items.all()])
+
+    def __str__(self):
+        return '{0} - {1}'.format(self.owner, self.ref_code)
+
 
 
 
