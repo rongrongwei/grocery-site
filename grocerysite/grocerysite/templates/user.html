@@ -5,6 +5,15 @@
     <p>Login Successful!</p>
     <p>This is the user page. Buy groceries!!!<br>
 
+    <h3>Name</h3>
+    <p> {{ first_name }} {{ last_name }} </p>
+
+    <h3>Address</h3>
+    <p> {{ address }} </p>
+
+    <h3>Phone</h3>
+    <p> {{ phone_number }} </p>
+
     <p>Search for Groceries</p>
     <form action="{% url 'search_results' %}" method="get">
       <input name="q" type="text" placeholder="Search for Groceries">
