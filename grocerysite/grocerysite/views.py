@@ -42,8 +42,8 @@ def login(request):
           p_hash = hashlib.sha256(password.encode())
           print(p_hash.hexdigest())
           if row[1] == p_hash.hexdigest():
-            context={'form': form, 'error': 'The login has been successful'}
-            return render(request, 'login.html', context)
+            context={'form': form, 'error': 'The login has been successful', 'username':username}
+            return render(request, 'user.html', context)
 
       context={'form': form, 'error': 'The username and password combination is incorrect'}
       return render(request, 'login.html', context)
