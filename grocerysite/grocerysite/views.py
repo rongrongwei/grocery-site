@@ -65,10 +65,3 @@ def add_to_cart(request, **kwargs):
     order_item, status = OrderItem.objects.get_or_create(product=product)
     return redirect(reverse('products:product-list'))
 
-
-
-
-
-
-
-
