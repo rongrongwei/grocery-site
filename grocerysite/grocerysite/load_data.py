@@ -5,6 +5,7 @@ import pandas as pd # for reading csv files
 def load_model(model_name, file_name, silent=False):
     data = pd.read_csv(file_name)
     DataModel = getattr(models, model_name)
+    DataModel.objects.all().delete()
 
     for idx, row in data.iterrows():
         record = DataModel()

@@ -16,8 +16,8 @@ class Product(models.Model):
     product_added = models.DateTimeField(auto_now=True, null=True)
     product_img_url = models.CharField(max_length=100, null=True)
     #NEW**********************************
-    slug =models.SlugField()
-    image = models.ImageField()
+    slug =models.SlugField(default='test')
+    image = models.ImageField(default='test')
 
     def __str__(self):
         return self.title

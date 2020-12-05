@@ -1,6 +1,6 @@
-﻿product_id,product_name,product_description,product_price,product_price_unit,product_img_url
-1,Apples,Delicious fruit,0.89,lb,img/001.jpg
-2,Bananas,Delicious fruit,0.5,lb,img/002.jpg
-3,Oranges,Delicious fruit,0.8,lb,img/003.jpg
-4,Watermelon,Delicious fruit,5.99,item,img/004.jpg
-5,Pizza,Savory italian dish with cheese,4.99,item,img/005.jpg
+﻿product_id,product_name,product_description,product_price,product_price_unit,product_img_url,slug,image
+1,Apples,Delicious fruit,0.89,lb,img/001.jpg,001,img/001.png
+2,Bananas,Delicious fruit,0.5,lb,img/002.jpg,002,img/002.png
+3,Oranges,Delicious fruit,0.8,lb,img/003.jpg,003,img/003.png
+4,Watermelon,Delicious fruit,5.99,item,img/004.jpg,004,img/004.png
+5,Pizza,Savory italian dish with cheese,4.99,item,img/005.jpg,005,img/005.png
