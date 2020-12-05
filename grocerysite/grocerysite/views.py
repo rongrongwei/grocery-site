@@ -155,10 +155,3 @@ def remove_single_product(request, slug):
         return redirect("core:product", slug=slug)
 
 
-
-
-
-
-
-
-
