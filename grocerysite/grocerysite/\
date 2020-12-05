@@ -7,7 +7,7 @@ from django.urls import reverse
 from django.utils import timezone
 
 from grocerysite.forms import Loginform
-import pdb, sqlite3, hashlib
+import pdb, sqlite3
 
 # from .models import Profile, Order, Product, OrderItem
 from grocerysite.models import Product # <- this line is important for search
@@ -35,20 +35,18 @@ def login(request):
       except Error as e:
         print(e)
       cur = conn.cursor()
-      cur.execute("select username, password from auth_user")
+      cur.execute("select username from auth_user")
 
       for row in cur:
-        if row[0] == username:
-          p_hash = hashlib.sha256(password.encode())
-          print(p_hash.hexdigest())
-          if row[1] == p_hash.hexdigest():
-            context={'form': form, 'error': 'The login has been successful'}
-            return render(request, 'login.html', context)
+        print(row[0])
+        if row[0] is username:
+          context={'form': form, 'error': 'The login has been successful'}
+          return render(request, 'login.html', context)
+        else:
+          context={'form': form, 'error': 'The username and password combination is incorrect'}
+          return render(request, 'login.html', context)
 
-      context={'form': form, 'error': 'The username and password combination is incorrect'}
-      return render(request, 'login.html', context)
-
-    context={'form':form, 'error': 'Login'}
+    context={'form':form, 'error': ''}
     return render(request, "login.html", context)
 
 
