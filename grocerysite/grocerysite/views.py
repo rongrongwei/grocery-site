@@ -11,7 +11,7 @@ import pdb, sqlite3, hashlib
 
 # from .models import Profile, Order, Product, OrderItem
 from grocerysite.models import Product # <- this line is important for search
-from .models import Product, OrderItem, Order
+from .models import Product, OrderItem, Order, UserInfo
 from .models import OrderItem
 
 
@@ -42,8 +42,18 @@ def login(request):
           p_hash = hashlib.sha256(password.encode())
           print(p_hash.hexdigest())
           if row[1] == p_hash.hexdigest():
-            context={'form': form, 'error': 'The login has been successful'}
-            return render(request, 'login.html', context)
+            query = UserInfo.objects.filter(user_name=username.lower())
+            result = query[0]
+            context={
+                    'form': form, 
+                    'error': 'The login has been successful', 
+                    'username':username,
+                    'first_name':result.first_name,
+                    'last_name':result.last_name,
+                    'address':result.address,
+                    'phone_number':result.phone_number
+            }
+            return render(request, 'user.html', context)
 
       context={'form': form, 'error': 'The username and password combination is incorrect'}
       return render(request, 'login.html', context)
