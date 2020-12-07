@@ -38,3 +38,11 @@ searchbar for the search and search_results page
 background images of the login and sign up page  
 prior to implementing bootstap the implementaion of materielize   
 implementation of bootstrap  
+
+## Michael Poznecki
+
+### Final Project
+Initial login page
+SQL queries using python libraries
+implementing hashing to the user's passwords before transmission
+Login the user by verifying username and password hash against database
