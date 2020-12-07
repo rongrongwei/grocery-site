@@ -6,7 +6,7 @@ from django.contrib.auth import login
 from django.urls import reverse
 from django.utils import timezone
 
-from grocerysite.forms import Loginform
+from grocerysite.forms import Loginform, Registerform
 import pdb, sqlite3, hashlib
 
 # from .models import Profile, Order, Product, OrderItem
@@ -60,6 +60,38 @@ def login(request):
 
     context={'form':form, 'error': 'Login'}
     return render(request, "login.html", context)
+
+def register(request):
+    form = Registerform(request.POST or None)
+    if form.is_valid():
+      username = form.cleaned_data.get("username")
+      password = form.cleaned_data.get("password")
+      address = form.cleaned_data.get("address")
+      phone = form.cleaned_data.get("phone")
+      p_hash= hashlib.sha256(password.encode())
+
+      try:
+        conn = sqlite3.connect(r"db.sqlite3")
+      except Error as e:
+        print(e)
+
+      cur = conn.cursor()
+      cur.execute("select MAX(id) from auth_user")
+      for row in cur:
+        new_id = row[0] + 1
+      cur.execute("insert into auth_user (id, password, last_login, is_superuser, username, last_name, email, is_staff, is_active, date_joined, first_name) values(" + str(new_id) + ",'" + p_hash.hexdigest() + "'," + "NULL,0,'" + username + "','','',1,1,'','');")
+      try:
+        conn.commit()
+      except Error as e:
+        print("User already exists")
+
+      with open("grocerysite/data/user_data.csv", "a") as file:
+        file.write("\n" + str(new_id) + "," + username + "," + username + "," + username + "," + address + "," + phone)
+      context={'form':form, 'error': "Registered in DB"}
+      return render(request, 'register.html', context)
+      
+    context={'form':form, 'error': 'Register'}
+    return render(request, 'register.html', context)
 
 
 def search_result(request):

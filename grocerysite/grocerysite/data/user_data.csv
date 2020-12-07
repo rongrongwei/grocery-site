@@ -1,3 +1,6 @@
 ﻿user_id,user_name,first_name,last_name,address,phone_number
 1,test_user,Test,User,123 Fake Street,(210) 765-4321
 2,test_user2,Test,User2,456 UTSA Dr,911
+4,test_user_9,test_user_9,test_user_9,1234 whatever way,123-456-7891
+
+5,test_user_3,test_user_3,test_user_3,1234 whatever way,1234

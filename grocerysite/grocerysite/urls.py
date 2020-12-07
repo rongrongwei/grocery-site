@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from django.conf.urls import url
-from .views import login
+from .views import login, register
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -33,6 +33,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     url('login/', login, name='login'),
+    url('register/', views.register, name='register'),
     path('search/', views.search, name='search'),
     #path('search_result/', views.SearchResultsView.as_view(), name='search_results'),
     path('search_result/', views.search_result, name='search_results'),
