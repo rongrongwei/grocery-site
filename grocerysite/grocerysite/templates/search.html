@@ -1,15 +1,59 @@
 <!-- this extends the header.html -->
 {% extends "header.html" %}
 {% block content %}
-    <h2>Search for Groceries</h2>
-    <p>  This is the search page page. Buy groceries!!!<br>
-    <form action="{% url 'search_results' %}" method="get">
-      <input name="q" type="text" placeholder="Search for Groceries">
-    </form>
+
+
+    <style>
+         #background {
+             left: 70;
+             right: 50;
+             width: 50%;
+             height: 100%;
+             padding-top: 10;
+
+}
+    </style>
+    <body style="background:url(https://i1.wp.com/www.estidia.eu/wp-content/uploads/2018/04/Savin-NY-Website-Background-Web.jpg) no-repeat ;background-size: 100%" >
+
+   <!--
+       	<div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+            <form action="{% url 'search_results' %}" method="get">
+              <input name="q" type="text" placeholder="Search for Groceries">
+              </div>
+            </form>
+           </div>
+        </div>
+        -->
     <!--
     LINKS:
     <ul>
         <li><a href="../">home</a></li>
     </ul>
     -->
+    <div id="background">
+    <br/>
+                                <h1 class="center">Search for Groceries</h1>
+        <p>  This is the search page page. Buy groceries!!!<br>
+            <p>Leave blank and press search to see foods</p>
+                           <form action="{% url 'search_results' %}" method="get">
+                                <div class="card-body row no-gutters align-items-center">
+                                    <div class="col-auto">
+                                        <i class="fas fa-search h4 text-body"></i>
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col">
+                                        <input name="q" class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search for groceries">
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col-auto">
+                                        <button class="btn btn-lg btn-success" type="submit">Search</button>
+                                    </div>
+                                    <!--end of col-->
+                                </div>
+                            </form>
+                        </div>
+                        <!--end of col-->
+                    </div>
+
 {% endblock %}
