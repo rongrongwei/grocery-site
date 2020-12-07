@@ -24,6 +24,7 @@ Facilitated and scheduled Team Meetings
 ## Christopher Urista
 
 ### Checkpoint 1
+Wrote part 1 introduction  
 
 ### Checkpoint 2
 Sequence Diagram for Checkpoint 2  
