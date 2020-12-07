@@ -40,7 +40,7 @@ prior to implementing bootstap the implementaion of materielize
 implementation of bootstrap  
 added container and styled search, search_result  
 added background to the new user  
-added container and styled the newuser page
+added container and styled the newuser page  
 added search bar to new user  
 added images to carousl on homepage
 final clean up  
