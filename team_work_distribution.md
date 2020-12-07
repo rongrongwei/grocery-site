@@ -42,7 +42,7 @@ added container and styled search, search_result
 added background to the new user  
 added container and styled the newuser page  
 added search bar to new user  
-added images to carousels on homepage
+added images to carousels on homepage  
 final clean up  
 
 ## Michael Poznecki
