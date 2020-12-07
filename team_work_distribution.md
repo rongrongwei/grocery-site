@@ -29,7 +29,7 @@ Facilitated and scheduled Team Meetings
 Sequence Diagram for Checkpoint 2  
 
 ### Final Project
-Main contributer of the html javascript and css
+Main contributer of the html javascript and css 
 navbar(title) across login, home, & search
 both the carousels on the home page that show the sliding images
 register box on the login page
