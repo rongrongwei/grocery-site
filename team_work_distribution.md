@@ -29,11 +29,11 @@ Facilitated and scheduled Team Meetings
 Sequence Diagram for Checkpoint 2  
 
 ### Final Project
-Main contributer of the html javascript and css. 
-navbar(title) across login, home, & search.
-both the carousels on the home page that show the sliding images.
-register box on the login page.
-searchbar for the search and search_results page.
-background images of the login and sign up page.
+Main contributer of the html javascript and css
+navbar(title) across login, home, & search
+both the carousels on the home page that show the sliding images
+register box on the login page
+searchbar for the search and search_results page
+background images of the login and sign up page
 prior to implementing bootstap the implementaion of materielize 
 implementation of bootstrap
