@@ -1,7 +1,39 @@
 <!-- this extends the header.html -->
 {% extends "header.html" %}
-{% block content %}
-<h2>Welcome {{ username }}</h2>
+{% block content %}    <style>
+             .box-1 {
+             color: black;
+             font-family: arial, Helvetica, sans-serif;
+             font-size: 12px;
+                 margin: auto;
+             width:200%;
+             margin: 20px 0;
+                 border:5px dotted #ccc;
+                 padding:20px;
+                 font: normal 12px Arial, Helvetica, sans-serif;
+                 line-height: 1.6em;
+                 font-weight: normal;
+        }
+
+         .container-1{
+            width: 15%;
+         margin: 3 32 0 32%;
+         }
+             .box-1 h1{
+             font-family: Tahoma;
+             font-weight: 800;
+             font-style: italic;
+             text-decoration: underline;
+         }
+    </style>
+
+
+
+
+
+                <div class="container-1">
+        <div class="box-1">
+       <h1>Welcome {{ username }}</h1>
     <p>Login Successful!</p>
     <p>This is the user page. Buy groceries!!!<br>
 
@@ -13,14 +45,43 @@
 
     <h3>Phone</h3>
     <p> {{ phone_number }} </p>
+        </div>
+    </div>
 
-    <p>Search for Groceries</p>
+        <div class="container">
+    <br/>
+	<div class="row justify-content-center">
+                        <div class="col-12 col-md-10 col-lg-8">
+                           <form action="{% url 'search_results' %}" method="get">
+                                <div class="card-body row no-gutters align-items-center">
+                                    <div class="col-auto">
+                                        <i class="fas fa-search h4 text-body"></i>
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col">
+                                        <input name="q" class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search for groceries">
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col-auto">
+                                        <button class="btn btn-lg btn-success" type="submit">Search</button>
+                                    </div>
+                                    <!--end of col-->
+                                </div>
+                            </form>
+                        </div>
+                        <!--end of col-->
+                    </div>
+</div>
+
+  <!--
     <form action="{% url 'search_results' %}" method="get">
       <input name="q" type="text" placeholder="Search for Groceries">
+      -->
     </form>
 
 
-         <body style="background:url(https://i0.wp.com/sociallover.net/wp-content/uploads/2017/08/welcome-images-animated.jpg) no-repeat ;background-size: 100%" >
+
+         <body style="background:url(https://wallpaperaccess.com/full/446984.jpg) no-repeat ;background-size: 100%" >
 
     <!--
     LINKS:

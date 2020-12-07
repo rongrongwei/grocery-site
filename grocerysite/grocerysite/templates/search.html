@@ -10,8 +10,36 @@
              width: 50%;
              height: 100%;
              padding-top: 10;
+            margin: auto;
+
+
 
 }
+    </style>
+    <style>
+             .box-1 {
+             color: black;
+             font-family: arial, Helvetica, sans-serif;
+             font-size: 12px;
+             width:500%;
+             margin: 20px 0;
+                 border:5px dotted #ccc;
+                 padding:20px;
+                 font: normal 12px Arial, Helvetica, sans-serif;
+                 line-height: 1.6em;
+                 font-weight: normal;
+        }
+
+         .container-1{
+            width: 15%;
+             margin: 10;
+         }
+             .box-1 h1{
+             font-family: Tahoma;
+             font-weight: 800;
+             font-style: italic;
+             text-decoration: underline;
+         }
     </style>
     <body style="background:url(https://i1.wp.com/www.estidia.eu/wp-content/uploads/2018/04/Savin-NY-Website-Background-Web.jpg) no-repeat ;background-size: 100%" >
 
@@ -33,9 +61,29 @@
     -->
     <div id="background">
     <br/>
-                                <h1 class="center">Search for Groceries</h1>
-        <p>  This is the search page page. Buy groceries!!!<br>
-            <p>Leave blank and press search to see foods</p>
+
+
+    <div class="container-1">
+        <div class="box-1">
+            <h1>Hungry?! LETS EAT!!</h1>
+          <p>
+              search for food items such as apples, bananas, watermelons, or just press search to see some suggestions.
+
+              HERE IS A RANDOM QUOTE:
+              When you think of your BIG goal, sometimes you start feeling overwhelmed.
+              Why? Because big goals don’t get achieved right away. Instead, you need to create mini
+              goals to help excite you along the way. This way you can be more goal-orientated and build a habit
+              of being more effective. Celebrating your small wins will help you stay motivated through your journey.
+              Plus, celebrating is always super fun. Maybe you break your goal down to 10 small-sized goals with tasks
+              that get you on track to achieve them. For each of the 10 goals you can add a small celebration.
+              Maybe a glass of champagne for one or a dessert with a sparkler on top for another.
+              ’t forget to check out some of our motivational quotes about success in a later section.
+          </p>
+        </div>
+    </div>
+
+
+
                            <form action="{% url 'search_results' %}" method="get">
                                 <div class="card-body row no-gutters align-items-center">
                                     <div class="col-auto">
