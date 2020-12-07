@@ -41,6 +41,17 @@
                     <div class="card-body">
                      <div class="container">
                       <div styleclass="container">
+                           <ul>
+        <div class="container">
+            <form method="POST" action=""/>
+              {% csrf_token %}
+              {% if error %}
+              {{ error }}
+              {% endif %}
+              {{ form.as_p }}
+             <input type="submit" name="submit" value="Log In"/>
+        </div>
+    </ul>
                         <form style="max-width:480px;margin:auto;">
                           <h1 class="h5 font-weight-normal">Sign in</h1>
                           <label for="emailAdress" class="sr-only mt-5">Email address</label>
@@ -60,7 +71,7 @@
     </div>
   </div>
 
-<!-- before changes
+
     <ul>
         <div class="container">
             <form method="POST" action=""/>
@@ -72,6 +83,6 @@
              <input type="submit" name="submit" value="Log In"/>
         </div>
     </ul>
- -->
+
 
 {% endblock %}
