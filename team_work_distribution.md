@@ -31,13 +31,19 @@ Sequence Diagram for Checkpoint 2
 
 ### Final Project
 Main contributer of the html, javascript, and css  
-navbar(title) across login, home, & search  
+navbar(title) across login, home, and search  
 both the carousels on the home page that show the sliding images  
 register box on the login page  
 searchbar for the search and search_results page  
 background images of the login and sign up page  
 prior to implementing bootstap the implementaion of materielize   
 implementation of bootstrap  
+added container and styled search, search_result  
+added background to the new user  
+added container and styled the newuser page  
+added search bar to new user  
+added images to carousels on homepage  
+final clean up  
 
 ## Michael Poznecki
 
