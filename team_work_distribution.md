@@ -52,3 +52,5 @@ Initial login page
 SQL queries using python libraries
 implementing hashing to the user's passwords before transmission
 Login the user by verifying username and password hash against database
+Register new user page created and implemented
+
