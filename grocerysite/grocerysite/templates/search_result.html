@@ -96,7 +96,8 @@
             <td>{{ prod.product_price_unit }}</td>
             <td>{{ prod.product_description }}</td>
             <td><img src="/static/{{ prod.product_img_url }}" height="150px"></td>
-            <td> <button type="button">Buy Me!</button> </td> <!-- Need to add "action" to button so it gets added to cart {{ prod.product_id }} can be use used to identify which product id to add to the cart-->
+            <td> <button  data-product = "{{ product.id }}" data-action = "add" class="btn
+            btn-outline-secondary add-btn update-cart" >Add to Cart</button> </td>
         </tr>
       {% endfor %}
     </table>

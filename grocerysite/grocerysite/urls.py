@@ -21,12 +21,9 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 from grocerysite import views
-from .views import (
-    add_to_cart,
-    remove_from_cart,
-    remove_single_product,
 
-)
+
+
 
 
 urlpatterns = [
@@ -37,10 +34,8 @@ urlpatterns = [
     #path('search_result/', views.SearchResultsView.as_view(), name='search_results'),
     path('search_result/', views.search_result, name='search_results'),
     #*************************************************************************    path('', HomeView.as_view(), name='home'),
-    path('add-to-cart/<slug>/', add_to_cart, name='add-to-cart'),
-    path('remove-from-cart/<slug>/', remove_from_cart, name='remove-from-cart'),
-    path('remove-product-from-cart/<slug>/', remove_single_product,
-         name='remove-single-item-from-cart')
+
+    path('update_item/', views.updateItem, name='update_item'),
     #*************************************************************************
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
