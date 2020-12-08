@@ -54,3 +54,10 @@ implementing hashing to the user's passwords before transmission
 Login the user by verifying username and password hash against database
 Register new user page created and implemented
 
+## Isaiah Rodriguez 
+
+### Checkpoint 1
+Worked on section 3 in SRS
+### Checkpoint 2
+State Diagram for Checkpoint 2
+### Final Project
