@@ -53,8 +53,15 @@ SQL queries using python libraries
 implementing hashing to the user's passwords before transmission
 Login the user by verifying username and password hash against database
 
-##Kyle Thomas
-###Final project
+## Isaiah Rodriguez
+### Checkpoint 1 
+Section 3 of SRS 
+Slight final revision 
+## Checkpoint 2
+Made State Diagram 
+
+## Kyle Thomas
+### Final project
 add and remove from Cart functionality
 cart view
 
