@@ -52,12 +52,16 @@ Initial login page
 SQL queries using python libraries
 implementing hashing to the user's passwords before transmission
 Login the user by verifying username and password hash against database
-Register new user page created and implemented
 
-## Isaiah Rodriguez 
+## Isaiah Rodriguez
+### Checkpoint 1 
+Section 3 of SRS 
+Slight final revision 
+## Checkpoint 2
+Made State Diagram 
 
-### Checkpoint 1
-Worked on section 3 in SRS
-### Checkpoint 2
-State Diagram for Checkpoint 2
-### Final Project
+## Kyle Thomas
+### Final project
+add and remove from Cart functionality
+cart view
+
